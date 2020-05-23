@@ -1,0 +1,122 @@
+
+html body{
+  height: 100%;
+  width: 100%;
+}
+body{
+    display:flex;
+    padding:0;
+    margin:0;
+}
+.container {
+  background-image: url("https://uploads-ssl.webflow.com/5e3d7c5fbc2301b873934a3e/5e40aa0c3ddc139834de7d46_Homepage.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+.volcontainer{
+    background-image: url("https://uploads-ssl.webflow.com/5e3d7c5fbc2301b873934a3e/5e40aa0c3ddc139834de7d46_Homepage.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+    flex:2;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding:20px;
+}
+.col *{
+    padding:10px;
+}
+.col2{
+    display: flex;
+    flex:3;
+}
+.form{
+    background-color: cornsilk;
+    color: black;
+    padding:20px
+}
+.button{
+    border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+h1 {
+  color: black;
+  opacity: 0.8;
+  font-size: 40px;
+  font-family: "Raleway", sans-serif;
+}
+h2 {
+  padding-top: 10px;
+  color: black;
+  opacity: 0.8;
+  font-size: 21px;
+  font-family: "Raleway", sans-serif;
+}
+#error{
+    color: red;
+}
+
+.button:hover {
+    background-color: #bd3f26;
+}
+ul {
+    position: absolute;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+@media (max-width: 900px) {
+.container{
+    background-image: none;
+    background-color: cornflowerblue;
+}
+  .login {
+    padding: 0;
+    padding-top: 40%;
+  }
+  .col2{
+      display:none;
+  }
+
+}

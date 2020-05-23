@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/login.css" rel='stylesheet'/>
+  </head>
+  <body>
+    <div class='container'>
+      <div class='col'>
+      <div class='form'>
+       <!---- <img src="https://uploads-ssl.webflow.com/5e3d7c5fbc2301b873934a3e/5e3d7f8dbc23016f2a936409_Donorbox_Logo.jpg">-->
+        <h1>Lazarus Rising Digital</h1>
+        <h2>Please Enter your Session Code</h2>
+        <input id="roomid"/><br/>
+        <div id='error'></div>
+        <button  onclick="redirectCode()" class='button'>Enter</button>
+        <a href="/volunteerLogin.html">Volunteers click here</a>
+      </div>
+      </div>
+      <div class='col2'></div>
+    </div>
+    <script>
+      function redirectCode(){
+        let roomid = document.getElementById("roomid").value;
+        if(roomid){
+          document.getElementById('error').innerHTML = "";
+          document.getElementById("roomid").value = "";
+          window.location.href = "/client.html?roomid="+roomid;
+        }else{
+          document.getElementById('error').innerHTML = "Invalid Session Code"
+        }
+      }
+    </script>
+  </body>
+</html>
