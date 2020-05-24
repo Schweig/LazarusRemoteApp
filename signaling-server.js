@@ -105,6 +105,7 @@ io.sockets.on("connection", function (socket) {
       channels[channel][id].emit("addPeer", {
         peer_id: socket.id,
         should_create_offer: false,
+        userdata: userdata
       });
       socket.emit("addPeer", { peer_id: id, should_create_offer: true });
     }

@@ -103,6 +103,7 @@
              * microphone/camcorder, join the channel and start peering up */
             join_chat_channel(DEFAULT_CHANNEL, {
               "whatever-you-want-here": "stuff",
+              video:USE_VIDEO
             });
           });
         });
@@ -166,7 +167,7 @@
           };
           peer_connection.onaddstream = function (event) {
             console.log("onAddStream", event);
-            var remote_media = USE_VIDEO ? $("<video>") : $("<audio>");
+            var remote_media = config.userdata ? $("<video>") : $("<audio>");
             remote_media.attr("autoplay", "autoplay");
             if (MUTE_AUDIO_BY_DEFAULT) {
               remote_media.attr("muted", "true");
